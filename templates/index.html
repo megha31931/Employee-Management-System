@@ -1,0 +1,141 @@
+{% load static %}
+<html>
+<head>
+
+    <title>
+        {% block 'title' %}
+        Main
+        {% endblock %}
+    </title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+ {% block 'style' %}
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+.myDiv
+{
+  border: 5px outset black;
+  background-color: lightblue;
+  text-align: center;
+}
+
+
+.logo
+{
+  position: relative;
+  float: left;
+  width: 100;
+  top:0
+}
+
+
+        {% endblock %}
+
+    </style>
+
+
+
+</head>
+<body>
+
+<img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+
+
+<h1 align=center>Employee Management System</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'empregistration' %}">Employee Registration</a></li>
+                <li><a href="{% url 'emplogin' %}">Employee Login</a></li>
+                <li><a href="{% url 'adminlogin' %}">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br>
+
+{% block 'body' %}
+
+<div class="myDiv">
+  <h2 align="left">This Project Contains Two Modules</h2>
+
+    <h4 align="left">I. Admin</h4>
+
+    <p style="text-align:left">
+        1. Admin Login<br>
+        2. Add Department<br>
+        3. Update Department<br>
+        4. View Departments<br>
+        5. View Employees<br>
+        6. Add Product<br>
+        7. View Products<br>
+    </p>
+
+       <h4 align="left">II. Employee</h4>
+
+    <p style="text-align:left">
+        1. Employee Registration<br>
+        2. Employee Login<br>
+        3. Employee Profile<br>
+        4. View Products<br>
+    </p>
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+</body>
+</html>
