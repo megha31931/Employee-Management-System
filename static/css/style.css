@@ -3,7 +3,7 @@ body {
 }
 
 .button {
-  background-color: navy; /* Changed from black to navy */
+  background-color: navy; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -22,7 +22,7 @@ input[type=email],
 select,
 input[type=date],
 textarea {
-  width: 90%; /* Changed from 100% */
+  width: 90%; 
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -35,5 +35,5 @@ label {
   padding: 12px 12px 12px 0;
   display: inline-block;
   font-weight: bold;
-  color: navy; /* Added color attribute */
+  color: navy;
 }
